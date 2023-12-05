@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', 'Times New Roman', 'serif';
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('betukeszlet/RobotoSlab-VariableFont_wght.ttf');
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container>* {
+    height: fit-content;
+    margin: 1%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    flex: 1 1 100%;
+    background-color: #DDF2FDCC;
+    padding: 8px;
+    color: #164863;
+    text-align: justify;
+}
+
+aside {
+    flex: 1 1 100%;
+    background-color: #DDF2FDCC;
+    padding: 15px;
+    text-align: center;
+    color: #164863;
+    font-size: 0.84em;
+}
+
+footer {
+    background-color: #DDF2FD;
+    color: #427D9D;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    margin-top: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*OSZTÁLYOK*/
+.pub{
+    width: 200px;
+    margin: 10px;
+}
+
+.tartalom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tartalom:hover {
+    transform: scale(0.95);
+}
+
+.galleria {
+    margin: auto;
+    width: 90vw;
+    height: 90vw;
+    margin: 2%;
+    text-align: center;
+}
+
+.dij_kiir {
+    color: #c64525;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cikkcim {
+    font-weight: bold;
+}
+
+label.error {
+    color: #c64525;
+    font-style: italic;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+aside.map {
+    background-color: #164863;
+    color: #FFFFFF;
+}
+
+aside.map a {
+    color: #DDF2FDCC;
+}
+
+.galleria-theme-classic {
+    background: #164863;
+}
+
+/*LOGO*/
+.logo1 {
+    padding: 2px;
+    margin: 0px;
+    text-align: center;
+    color: #164863;
+    font-size: 96px;
+}
+
+.logo2 {
+    padding: 2px;
+    margin: 0px;
+    color: #164863;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.logo3 {
+    padding: 2px;
+    margin: 0px;
+    color: #427D9D;
+    font-size: 29px;
+    line-height: 36px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/*MENÜ*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav li a {
+    display: block;
+    padding: 8px;
+    margin-bottom: 12px;
+    color: #164863;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media all and (min-width: 600px) {
+
+    /*tablet*/
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    article {
+        flex-basis: 53%;
+    }
+
+    figure {
+        flex-basis: 33%;
+    }
+
+    aside {
+        flex-basis: 100%;
+    }
+
+}
+
+@media all and (min-width: 768px) {
+
+    /*számítógép*/
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1%;
+    }
+
+    article {
+        flex-basis: 63%;
+    }
+
+    figure {
+        flex-basis: 23%;
+    }
+
+    aside {
+        flex-basis: 23%;
+    }
+
+
+}

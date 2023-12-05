@@ -1,0 +1,19 @@
+1. Oldal készítőjének neve: Dr. Sziládi Péter Sándor
+
+2. milyen URL címen található a weblap: https://psziladi.github.io/webfejlesztes/
+
+3. Adj egy rövid 2 mondatos leírást a weboldalad témájáról: Ügyvédi tevékenységemhez egy olyan webodalt készítettem, ahol 
+az ügyfelek minden információt elérhetnek a jogi szolgáltatásaimról. A látogak meg is ismerhetik a munkámat, tapasztalataimat 
+és felvehetik velem a kapcsolatot.
+
+4. a) Add meg, melyik oldalon található a saját JS kódod: A "szolgaltatasok.html" oldalom az oldal alján található és a "myscript.js" külön dokumentumban van a függvény, amit meghívok.
+ b) Röviden ismertesd a használatának célját, és a működését: A kód egy űrlap kezelésére szolgál. Az űrlap jogi szolgáltatások díját számolja ki az űrlapon megadott válaszok és értékek alapján.
+ A document.getElementById("mybutton").addEventListener("click", kiszamol);: Ebben a sorban a kód azonosítja az űrlapon található "mybutton" id-jú gombot és hozzárendel egy eseménykezelőt. Amikor a gombra kattintanak,
+ az eseménykezelő meghívja a kiszamol nevű függvényt. function kiszamol() { ... }: Ez a függvény hajtja végre a kalkulációt és jeleníti meg az eredményt. let dij = 100;: Létrehoz egy változót (dij), amelyet az összegző 
+ díjak tárolására használok, kezdeti értéke 100. Az if (a || b) { dij += 200; } például azt jelenti, hogy, ha a "per" vagy "okirat" checkbox ki van jelölve, akkor a dij értékét 200-zal növeli. A kód hasonló módon dolgozik 
+ a többi űrlap elemmel és alkalmazza a különböző feltételeket. Végül a kód alább megjeleníti az összegzett havi szolgáltatási díjat és egy kis kommentet is ad hozzá.
+
+5. Add meg, hogy milyen egyedi fonttípust, vagy google web fontot használtál, és pontosan hol: Roboto Slab fontot használtam, amelyet a betukeszlet mappába helyeztem és onnan hívom meg. Az egész oldal egységesen ezt a fontot használja.
+
+6. Ha átveszel valahonnan kódot, amit nem Te írtál (pl . javascript programot, css formázást), akkor itt tüntesd fel a forrást: A Google Maps részletet a Google developer oldaláról vettem és kitöltöttem megfelelően (reszponzívvá tettem).
+A többi kód inspirációját az előadáson leadottak adták. A képek vagy saját készítésűek vagy szabad felhasználásúak. Mivel a Github nem engedett feltölteni jQuery mappákat a fájlok sokasága miatt, ezért a https://cdnjs.com/-ot használtam.

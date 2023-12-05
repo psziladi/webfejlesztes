@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dr. Sziládi, Péter Sándor">
+    <meta name="copyright" content="All rights reserved.">
+    <meta name="description" content="This is a professional webpage for Dr. Sziládi, Péter Sándor attorney-at-law.">
+    <link rel="icon" href="kepek/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Kapcsolat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.js"
+        integrity="sha512-kytF3CSSU1pmvs5bQkHKi4UcfsLUBVwu3biyLu+2Zb3ivFxgU1/a0HvbE96+IsbMI4DXxKzxMLNNBFKYWeMDNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telszam: {
+                        required: true,
+                        minlength: 13,
+                    },
+                    hatarido: {
+                        required: true
+                    },
+                    elfogad: {
+                        required: true,
+                    },
+                },
+
+                messages: {
+                    nev: "Kérlem, adja meg a nevét vagy a cégnevét!",
+                    email: {
+                        required: "Adja meg az e-mail címét!",
+                        email: "Kérem, adjon meg egy létező e-mail címet!"
+                    },
+                    telszam: "Adja meg a telefonszámát!",
+                    hatarido: "Adjon meg egy határidőt!",
+                    elfogad: "El kell fogadnia az adatkezelésre vonatkozó feltételeket!"
+                },
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <table class="logo">
+            <tr>
+                <td rowspan="2" class="logo1">§</td>
+                <td class="logo2">DR. SZILÁDI</td>
+            </tr>
+            <tr>
+                <td class="logo3">PÉTER, ÜGYVÉD</td>
+            </tr>
+        </table>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bemutatkozás</a></li>
+                <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+                <li><a href="publikaciok.html">Publikációk</a></li>
+                <li><a class="active" href="#">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <article>
+            <h2 class="cikkcim">Adja meg adatait és felveszem Önnel a kapcsolatot!</h2>
+            <form action="http://szamtud.uni-corvinus.hu/receive.php" method="post" id="myform">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="nev">Név/Cégnév:<sup>*</sup></label>
+                            <br><input type="text" name="nev" id="nev" placeholder="pl. Alphabet Plc." size="20"
+                                maxlength="40">
+                            <br>
+                            <br>
+                            <label for="email">E-mail cím:<sup>*</sup></label>
+                            <br><input type="text" name="email" id="email" placeholder="pl. example@example.com"
+                                size="40" maxlength="50">
+                            <br>
+                            <br>
+                            <label for="telszam">Telefonszám:<sup>*</sup></label>
+                            <br><input type="tel" name="telszam" id="telszam" placeholder="pl. 0036201234567">
+                            <br>
+                            <br>
+                            <label>Meddig várja a válaszunkat?<sup>*</sup></label>
+                            <br><input type="date" name="hatarido" id="hatarido">
+                            <br>
+                            <br>
+                            Lakóhely/székhely:<br>
+                            <label for="iranyitoszam">Irányítószám: </label>
+                            <input type="number" name="iranyitoszam" id="iranyitoszam" min="1011" max="9900">
+
+                            <label for="helyseg">Helység: </label>
+                            <input type="text" name="helyseg" id="helyseg">
+
+                            <label for="kozterulet">Közterület neve: </label>
+                            <input type="text" name="kozterulet" id="kozterulet">
+
+                            <label for="szam">Szám: </label>
+                            <input type="number" name="szam" id="szam" min="1">
+                            <br>
+                            <br>
+                            <label for="elfogad">Elfogadja az adatkezelésre vonatkozó feltételeket?<sup>*</sup></label>
+                            <input type="checkbox" id="elfogad" name="elfogad" value="igen">
+                            <br>
+                            <p><em><sup>*</sup>Kötelezően kitöltendő mezők</em></p>
+                            <input type="submit" value="Küldés">
+                            <input type="reset" value="Visszaállítás">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </article>
+        <aside class="map">
+            <h2 class="cikkcim">Dr. Sziládi Péter Sándor, egyéni ügyvéd</h2>
+            <p>Cím: H-2040 Budaörs, Petőfi Sándor utca 71.<br>
+                Tel.: +36 11 123 1234<br>
+                E-mail: <a href="mailto:peter@drsziladi.hu">peter@drsziladi.hu</a><br>
+                Félfogadás: telefonos egyeztetés alapján.
+            </p>
+            <div class="map-responsive">
+                <iframe style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?q=2400+Budaörs,+Petőfi+Sándor+utca+71.&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            </div>
+        </aside>
+    </div>
+    <footer>&copy; Dr. Sziládi Péter Sándor egyéni ügyvéd, kizárólag oktatási célokra!</footer>
+    <script src="myscript.js"></script>
+</body>
+
+</HTML>
